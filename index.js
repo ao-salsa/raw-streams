@@ -7,13 +7,6 @@ const app = express();
 
 const target = 'http://64.176.217.185:1234/stream/';
 
-// Create the proxy middleware
-const mathProxy = createProxyMiddleware({
-  target,
-  changeOrigin: true, // Needed for virtual hosted sites
-  logLevel: 'debug',
-});
-
 const mathProxy = createProxyMiddleware({
   target,
   changeOrigin: true,
